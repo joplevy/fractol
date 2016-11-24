@@ -6,7 +6,7 @@
 /*   By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 02:10:13 by jplevy            #+#    #+#             */
-/*   Updated: 2016/11/19 02:52:31 by jplevy           ###   ########.fr       */
+/*   Updated: 2016/11/24 04:27:17 by jplevy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,27 @@ typedef struct		s_mlx
 	void			*win;
 	void			*img;
 	char			*p;
-	int				bpp;
+	int				bp;
 	int				sl;
 	int				endian;
 	float			zoom;
 	t_cpx			merge;
+	int				max_it;
+	int				c;
+	char			*name;
 }					t_mlx;
 
+/*
+** moves.c
+*/
+int					my_mouse_func(int keycode, int x, int y, void *param);
+int					my_key_func(int keycode, void *param);
+void				ft_move_rlud(void *param, double m, double n);
+
+/*
+** main.c
+*/
+int					ft_is_param(char *str);
+void				ft_put_fract(t_mlx *mlx);
+int					ft_get_col(int y, int x, t_mlx *mlx);
 #endif
