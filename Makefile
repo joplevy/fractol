@@ -6,7 +6,7 @@
 #    By: jplevy <jplevy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 13:21:18 by jplevy            #+#    #+#              #
-#    Updated: 2016/11/24 04:24:15 by jplevy           ###   ########.fr        #
+#    Updated: 2016/11/25 01:15:12 by jplevy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME = fractol
 CC = gcc
 CFLAG = -Wall -Werror -Wextra
 SRC_NAME = main.c \
-			moves.c
+			moves.c \
+			fract.c
 OBJ_NAME = $(SRC_NAME:.c=.o)
 LIBFT_PATH = ./libft/
 LIBFT_NAME = libft.a
